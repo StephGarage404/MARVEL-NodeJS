@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <link rel="stylesheet" href="https://unpkg.com/@picocss/pico@1.4.0/css/pico.min.css">
+</head>
+<body>
+  <h1>Liste des personnages</h1>
+  <table>
+    <thead>
+      <tr>
+        <th>Nom</th>
+        <th>Description</th>
+        <th>Équipe</th>
+        <th>Photo</th>
+      </tr>
+    </thead>
+    <tbody>
+      {{#personnages}}
+      <tr>
+        <td><a href="/profil/{{id}}">{{nom}}</a></td>
+        <td>{{description}}</td>
+        <td>{{equipe_nom}}</td>
+        <td><img src="/public/{{photo}}" alt="blabla"/></td>
+      </tr>
+      {{/personnages}}
+    </tbody>
+  </table>
+  <a href="/create">Ajouter un personnage</a>
+<img src=/{{personnage.photo}} alt="blzblzblz"/>
+</body>
+</html>
